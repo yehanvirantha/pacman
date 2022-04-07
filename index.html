@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Challenge-1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main-title"><h1>PACMAN</h1></div>
+<div class="main-wrapper">
+    <div class="game-board">
+        <table>
+            <tr>
+                <td id="40"></td>
+                <td id="41"></td>
+                <td id="42"></td>
+                <td id="43"></td>
+                <td id="44"></td>
+            </tr>
+            <tr>
+                <td id="30"></td>
+                <td id="31"></td>
+                <td id="32"></td>
+                <td id="33"></td>
+                <td id="34"></td>
+            </tr>
+            <tr>
+                <td id="20"></td>
+                <td id="21"></td>
+                <td id="22"></td>
+                <td id="23"></td>
+                <td id="24"></td>
+            </tr>
+            <tr>
+                <td id="10"></td>
+                <td id="11"></td>
+                <td id="12"></td>
+                <td id="13"></td>
+                <td id="14"></td>
+            </tr>
+            <tr>
+                <td id="00"></td>
+                <td id="01"></td>
+                <td id="02"></td>
+                <td id="03"></td>
+                <td id="04"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="game-controls">
+        <div class="pacman-place">
+            <span>
+                <label class="control-label">X :</label>
+                <input class="form-control" type="number" id="x_input" min="0" max="4" value="0" />
+            </span>
+                <span>
+                <label class="control-label">Y :</label>
+                <input class="form-control" type="number" id="y_input" min="0" max="4" value="0" />
+            </span>
+                <span>
+                <label class="control-label">Face :</label>
+                <select class="form-control" id="face_input">
+                    <option value="north">North</option>
+                    <option value="south">South</option>
+                    <option value="east">East</option>
+                    <option value="west">West</option>
+                </select>
+            </span>
+            <span><button class="btn btn-primary action-btn" id="place_pacman">PLACE</button> </span>
+        </div>
+        <hr/>
+        <div class="pacman-direction">
+            <div><label>PLAY</label></div>
+            <span><button class="btn btn-secondary rotate-left action-btn" title="Left" data-action="left" id="place_left"><i class="fa fa-undo" aria-hidden="true"></i> Left</button> </span>
+            <span><button class="btn btn-secondary rotate-right action-btn" title="Right" data-action="right" id="place_right"><i class="fa fa-repeat" aria-hidden="true"></i> Right</button> </span>
+            <span><button class="btn btn-primary action-btn" data-action="move" id="place_move"><i class="fa fa-play" aria-hidden="true"></i> MOVE</button> </span>
+        </div>
+        <hr/>
+        <div class="pacman-report">
+            <div><label>REPORT</label></div>
+            <span><button class="btn btn-primary action-btn" data-action="report" id="place_report"><i class="fa fa-file-text-o" aria-hidden="true"></i> GENARATE</button> </span>
+            <div class="report-container" id="report_data"></div>
+        </div>
+    </div>
+</div>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="script.js"></script>
+</body>
+</html>
